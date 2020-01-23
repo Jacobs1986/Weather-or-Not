@@ -7,7 +7,9 @@ $.ajax({
     url: fictionURL,
     method: "GET"
 }).then(function(fictionBookList) {
-    console.log(fictionBookList);
+    let list = fictionBookList.results.books;
+    typeofList = "fiction";
+    list.forEach(bookDisplay);
 })
 
 // nonfiction list
@@ -17,5 +19,9 @@ $.ajax({
     url: nonFictionURL,
     method: "GET"
 }).then(function(nonFictionBookList) {
-    console.log(nonFictionBookList);
+
 })
+
+let bookDisplay = (list, typeofList) => {
+    console.log(list.title);
+}
