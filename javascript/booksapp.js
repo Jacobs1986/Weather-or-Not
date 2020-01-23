@@ -21,12 +21,22 @@ $.ajax({
     method: "GET"
 }).then(function(nonFictionBookList) {
     let list = nonFictionBookList.results.books;
+    /*
     for (let i = 0; i < list.length; i++) {
         bookDisplay(list[i], "nonfiction");
     }
+    */
 })
 
-let bookDisplay = (list, typeofList) => {
-    console.log(list.title);
-    console.log(typeofList);
+let bookDisplay = (list, displayID) => {
+    console.log(list);
+    console.log(displayID);
+    // create the book card where all the information is going to go, this will be a div with a class of .bookCard
+    // get the title, author, description and book_image and save them to different variables
+    // create paragraph for the title, author and description
+    // add an id for each: title id "bookTitle" author "bookAuthor" description "bookDescription"
+    // append each to the book card
+    // create cover variable with the src being bookImage
+    // append to the book card
+    // append book card to the apporiate div
 }
