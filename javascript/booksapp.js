@@ -35,14 +35,27 @@ let bookDisplay = (list, displayID) => {
     let book = $("<div>").addClass("bookCard");
     // get the title, author, description and book_image and save them to different variables
     let title = list.title;
+    let author = list.author;
+    let description = list.description;
+    let bookImage = list.book_image;
     // create paragraph for the title, author and description
     title = $("<p>").text(title);
+    author = $("<p>").text(author);
+    description = $("<p>").text(description);
     // add class for each: title "bookTitle" author "bookAuthor" description "bookDescription"
     title.addClass("bookTitle");
+    author.addClass("bookAuthor");
+    description.addClass("bookDescription");
     // append each to the book card
     book.append(title);
+    book.append(author);
+    book.append(description);
     // create cover variable with the src being bookImage
+    let cover = $("<img>").attr("src", bookImage);
+    // add a class of cover to cover
+    cover.addClass("cover");
     // append to the book card
+    book.append(cover);
     // append book card to the apporiate div
     $(`#${displayID}`).append(book);
 }
