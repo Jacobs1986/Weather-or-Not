@@ -27,16 +27,22 @@ $("#submit").on("click", function (event) {
             convertedDate = moment(date).format("h:mm A")
             // get the temperature
             temperature = forecast[i].main.temp;
+            // get the weather description
+            description = forecast[i].weather[0].description;
             // console log the results
             console.log(convertedDate);
             console.log(`Temperature (F): ${Math.floor(temperature)}`)
+            console.log(description);
             // display results into the table
             $("#results").append(
                 `<tr>
                     <td>${convertedDate}</td>
                     <td>${Math.floor(temperature)}
+                    <td>${description}</td>
                 </tr>`
             );
+            // clear the zip
+            $("#zip").val("").focus();
         }
     })
 });
