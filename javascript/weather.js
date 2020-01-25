@@ -16,6 +16,20 @@ $.ajax({
     method: "GET"
     }).then(function(response) {
         console.log(response.list)
-        let date = response.list[0].dt;
-        console.log(date);
+        let forecast = response.list;
+        console.log(forecast);
+       for (i = 0; i < 3; i++) {
+           // get the date
+           // can we also get time? 
+           let date = forecast[i].dt;
+           // convert the date to a more readable time.
+           date = moment.unix(date).toDate();
+           console.log(moment(date).format("MM/DD/YYYY h:mm A"));
+       }
 })});
+
+/*
+convert to F
+--display weather
+take in degree, weather.description to determine good or bad weather 
+ */
