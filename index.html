@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<footer lang="en">
+<div lang="en">
 
     <head>
         <meta charset="UTF-8">
@@ -7,28 +7,39 @@
         <meta http-equiv="X-UA-Compatible" content="ie=edge">
         <title>WEATHER OR NOT</title>
 
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
         <link href="https://fonts.googleapis.com/css?family=Londrina+Shadow&display=swap" rel="stylesheet">
-        <link href="https://fonts.googleapis.com/css?family=Permanent+Marker&display=swap" rel="stylesheet">
-        <link href="https://fonts.googleapis.com/css?family=Chewy&display=swap" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css?family=Londrina+Solid&display=swap" rel="stylesheet">
         <link rel="stylesheet" type="text/css" href="Assets/reset.css">
         <link rel="stylesheet" type="text/css" href="Assets/style.css">
     </head>
 
-    <body>
+    <body class="">
         <header id="header">
-            <h1>WEATHER OR NOT</h1>
-        </header>
-        <div id="content" class="container effect2">
+            <div class="center">
+                <h1>WEATHER OR NOT</h1>
+            </div>
 
-            <aside id="weather">
-                <h3>YOUR WEATHER</h3><br>
-                <label>Enter your zipcode:</label>
-                <input type="number" rows="5"></input>
+        </header>
+        <div id="content" class="container">
+
+            <aside id="weather" class="align-center">
+                <h3>WEATHER IN YOUR AREA:</h3><br>
+                <label>Enter your zipcode:</label><br>
+                <input id="zip" type="text" maxlength="5"></input>
                 <div id="weatherResults"></div>
+                <input id="submit" type="submit">
             </aside>
 
             <br>
-            <main id="stuff">STUFF TO DO</main>
+            <main id="stuff">
+                <h3>STUFF TO DO</h3>
+
+                <div id="stuffResultsButtonArea">
+                    <div id="activityButton" class="btn btn-outline-warning">button sample</div>
+                </div>
+            </main>
+
             <br>
         </div>
         <br>
@@ -36,6 +47,7 @@
         <footer id="footer">
             <h6> &copy; The Meteorologists</h6>
         </footer>
+        <script src="Assets/buttonGenerator.js"></script>
     </body>
 
-</footer>
+</div>
