@@ -30,6 +30,13 @@ $("#submit").on("click", function (event) {
             // console log the results
             console.log(convertedDate);
             console.log(`Temperature (F): ${Math.floor(temperature)}`)
+            // display results into the table
+            $("#results").append(
+                `<tr>
+                    <td>${convertedDate}</td>
+                    <td>${Math.floor(temperature)}
+                </tr>`
+            );
         }
     })
 });
