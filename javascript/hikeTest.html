@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+
+    <script>
+        var queryURL = "https://www.hikingproject.com/data/get-trails?lat=41.2565&lon=-95.9345&maxDistance=50&key=200673425-58529fa038b4b328e30d69f2afdf1905"
+        
+$.ajax({
+          url: queryURL,
+          method: "GET"
+        }).then(function(response) {
+              console.log(response); 
+               })
+
+                </script>
+    
+</body>
+</html>
