@@ -21,11 +21,9 @@ $.ajax({
     method: "GET"
 }).then(function(nonFictionBookList) {
     let list = nonFictionBookList.results.books;
-    /*
     for (let i = 0; i < list.length; i++) {
-        bookDisplay(list[i], "nonfiction");
+        bookDisplay(list[i], "listnonFiction");
     }
-    */
 })
 
 let bookDisplay = (list, displayID) => {
