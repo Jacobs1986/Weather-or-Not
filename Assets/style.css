@@ -1,0 +1,46 @@
+#header {
+    font-size: 50px;
+    line-height: 62px;
+    display: flex;
+    justify-content: space-evenly;
+    font-family: 'Londrina Shadow', cursive;
+    color: rgb(0, 0, 173);
+    background-color: rgb(255, 210, 96);
+}
+
+#content {
+    display: flex;
+    justify-content: space-around;
+    width: 80%;
+    font-family: 'Permanent Marker', cursive;
+    box-shadow: ;
+}
+
+#weather {
+    width: 40%;
+    border-width: 1px;
+    border-style: dotted;
+    border-color: rgb(255, 183, 0);
+    font-family: 'Permanent Marker', cursive;
+}
+
+#weatherResults {
+    display: flex;
+    flex-wrap: wrap;
+    min-height: 50px;
+    justify-content: space-evenly;
+}
+
+#stuff {
+    width: 60%;
+    border-width: 1px;
+    border-style: dotted;
+    border-color: rgb(255, 183, 0)
+}
+
+
+}
+#footer {
+    _display: flex;
+    _align-content: center;
+}
