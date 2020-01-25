@@ -63,7 +63,7 @@
                                                                         font-family: 'Londrina Solid', cursive;
                                                                     }
                                                                     
-                                                                    .btn-outline-warning :hover {
+                                                                    #activityButton.btn-outline-warning:hover {
                                                                         color: rgb(0, 0, 173);
                                                                     }
                                                                     
