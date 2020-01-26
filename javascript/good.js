@@ -5,7 +5,7 @@ var lat;
 var key = "AIzaSyDaYhBygIiyYUEu9oWv-iE86pu_YzrtqsQ";
 var queryURL = "https://maps.googleapis.com/maps/api/geocode/json?address=" + zip + "&key=" + key;
 var queryURL2 = "https://www.hikingproject.com/data/get-trails?lat=" + lat + "&lon=" + lng + "&maxDistance=50&key=200673425-58529fa038b4b328e30d69f2afdf1905";
-
+//when the zip is submitted gwt necessary info for good weather display
 $("#submit").on("click", function(event) {
     event.preventDefault();
     console.log("clicked");
@@ -14,7 +14,7 @@ $("#submit").on("click", function(event) {
 
    var queryURL = "https://maps.googleapis.com/maps/api/geocode/json?address=" + zip + "&key=" + key;
 
-   
+   //call google geocode api to convert zip to long and lat
 $.ajax({
     url: queryURL,
     method: "GET"
@@ -26,8 +26,9 @@ $.ajax({
          
         lat = lat.toString();
         lng = lng.toString();
+        //use lat and long from google api in the hiking url
                 queryURL2 = "https://www.hikingproject.com/data/get-trails?lat=" + lat + "&lon=" + lng + "&maxDistance=50&key=200673425-58529fa038b4b328e30d69f2afdf1905";
-        
+        //call hiking api to get hiking trails 
         $.ajax({
             url: queryURL2,
             method: "GET"

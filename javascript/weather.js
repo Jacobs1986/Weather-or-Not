@@ -8,7 +8,7 @@ $("#submit").on("click", function (event) {
     zip = $("#zip").val().trim();
     console.log(zip);
 
-    var queryURL = `http://api.openweathermap.org/data/2.5/forecast?zip=${zip},us&units=imperial&APPID=${key}`;
+    var queryURL = `http://api.openweathermap.org/data/2.5/forecast?zip=${zip},us&units=imperial&APPID=${key}&cnt=3`;
 
 
     $.ajax({
@@ -29,6 +29,8 @@ $("#submit").on("click", function (event) {
             temperature = forecast[i].main.temp;
             // get the weather description
             description = forecast[i].weather[0].description;
+            //get main for percipitaion 
+            main = forecast[i].weather[0].main;
             // console log the results
             console.log(convertedDate);
             console.log(`Temperature (F): ${Math.floor(temperature)}`)
@@ -43,12 +45,32 @@ $("#submit").on("click", function (event) {
             );
             // clear the zip
             $("#zip").val("").focus();
+
+//depending on conditions run good or bad weather function
+
+    //need to break the loop if 
+    //what if we made an avg temp variable and a description array to check?
+
+/*            if (avgTemperature < "50" && main == "Rain" || description == "Snow" || main == "Thunderstorm" || main == "Drizzle") {
+                badWeather();
+
+            } else {
+                goodWeather();
+            }*/
+        
         }
     })
 });
 
-/*
+/*function goodWeather(){
+    console.log("good!")
+}
+
+function badWeather(){
+    console.log("bad...")
+}
+
+
 convert to F
 --display weather
-take in degree, weather.description to determine good or bad weather
- */
+take in degree, weather.description to determine good or bad weather */
