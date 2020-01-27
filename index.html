@@ -22,6 +22,17 @@
         <!--C's Animation CSS-->
         <link rel="stylesheet" type="text/css" href="Assets/anime.css">
 
+        <!--According Expansion-->
+        <link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+        <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+        <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+        <script>
+            $(function() {
+                $("#accordion").accordion();
+            });
+        </script>
+
+
     </head>
 
     <body>
@@ -51,7 +62,7 @@
                 <div id="stuff">
                     <h3>STUFF TO DO</h3>
                     <!--Activity Buttons to Display Here-->
-                    <div id="stuffResultsButtonArea">
+                    <div id="accordion">
                         <!--     <div id="activityButton" class="btn btn-outline-warning">button sample</div>   -->
                     </div>
 
