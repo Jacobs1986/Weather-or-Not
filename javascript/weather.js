@@ -1,6 +1,6 @@
 
 console.log("linked")
-var zip;
+var zip ;
 var key = "2c2ebda745768cdab3335ed8a1f21aef"
 $("#submit").on("click", function (event) {
     event.preventDefault();
