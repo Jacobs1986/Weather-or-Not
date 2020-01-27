@@ -4,6 +4,7 @@ body {}
     width: 80%;
     _display: flex;
     _justify-content: space-around;
+    z-index: 2;
 }
 
 .center {
@@ -16,9 +17,11 @@ h1 {
     text-align: center;
     font-family: 'Londrina Shadow', cursive;
     color: rgb(0, 0, 173);
+    z-index: 2;
 }
 
 .headerDecor {
+    z-index: 2;
     border-width: 1px;
     border-style: solid;
     border-color: rgb(0, 0, 173);
@@ -103,6 +106,7 @@ p {
 
 .container {
     position: relative;
+    background-color: white;
 }
 
 table {
@@ -110,4 +114,9 @@ table {
     justify-content: space-evenly;
     margin: 10px;
     color: rgb(0, 0, 173);
+}
+
+h6 {
+    color: rgb(80, 75, 12);
+    ;
 }
