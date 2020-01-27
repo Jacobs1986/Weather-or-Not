@@ -28,5 +28,17 @@ $.ajax({
         let overview = array.overview;
         let poster = array.poster_path;
         console.log(poster);
+        // create paragraphs
+        let titleP = $("<p>").text(title);
+        let ratingP = $("<p>").text(`Rating (out of 10): ${rating}`);
+        let releaseP = $("<p>").text(`Release Date: ${release}`);
+        let overviewP = $("<p>").text(overview);
+        // append paragraphs to the card
+        card.append(titleP);
+        card.append(ratingP);
+        card.append(releaseP);
+        card.append(overviewP);
+        // display the card in the movies-list div
+        $("#movies-list").append(card);
     })
 })
