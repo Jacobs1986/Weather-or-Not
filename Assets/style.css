@@ -84,6 +84,7 @@ p {
 
 .btn-outline-warning {
     font-family: 'Londrina Solid', cursive;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.05), 0 6px 20px 0 rgba(0, 0, 0, 0.05);
 }
 
 #activityButton.btn-outline-warning:hover {
@@ -100,8 +101,11 @@ p {
     width: 50%;
 }
 
-#submit {
-    color: rgb(0, 0, 173);
+input {
+    border-color: rgb(255, 210, 96);
+    font-family: 'Londrina Solid', cursive;
+    color: rgb(255, 210, 96);
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.05), 0 6px 20px 0 rgba(0, 0, 0, 0.05);
 }
 
 .container {
@@ -121,10 +125,18 @@ h6 {
     ;
 }
 
+#resultsTable {
+    display: inline;
+    border: 1px solid black;
+    _border-collapse: collapse;
+}
+
 table,
 th,
 td {
-    display: inline;
-    border: 1px solid black;
-    border-collapse: collapse;
+    font-family: 'Londrina Solid', cursive;
+    padding: 6px;
+    border: 1px dotted rgb(255, 210, 96);
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.05), 0 6px 20px 0 rgba(0, 0, 0, 0.05);
+    _border-collapse: collapse;
 }

@@ -46,7 +46,8 @@ $("#submit").on("click", function(event) {
                     <td>${convertedDate}</td>
                     <td>${Math.floor(temperature)}</td>
                     <td>${description}</td>
-                </tr></table>`
+                </tr>
+                </table>`
             );
             // clear the zip
             $("#zip").val("").focus();
