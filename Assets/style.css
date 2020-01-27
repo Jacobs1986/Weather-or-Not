@@ -91,6 +91,12 @@ p {
     color: rgb(0, 0, 173);
 }
 
+input#submit:hover {
+    color: rgb(0, 0, 173);
+    background-color: rgb(255, 210, 96);
+    ;
+}
+
 #footer {
     width: 100%;
     display: flex;
@@ -106,6 +112,8 @@ input {
     font-family: 'Londrina Solid', cursive;
     color: rgb(255, 210, 96);
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.05), 0 6px 20px 0 rgba(0, 0, 0, 0.05);
+    padding: 5px;
+    border-radius: 4px;
 }
 
 .container {
