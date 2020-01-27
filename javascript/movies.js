@@ -33,11 +33,15 @@ $.ajax({
         let ratingP = $("<p>").text(`Rating (out of 10): ${rating}`);
         let releaseP = $("<p>").text(`Release Date: ${release}`);
         let overviewP = $("<p>").text(overview);
+        // get the poster
+        let posterImage = $("<img>").attr("src", `https://image.tmdb.org/t/p/w300${poster}`)
         // append paragraphs to the card
         card.append(titleP);
         card.append(ratingP);
         card.append(releaseP);
         card.append(overviewP);
+        // append posterImage to the card
+        card.append(posterImage);
         // display the card in the movies-list div
         $("#movies-list").append(card);
     })
