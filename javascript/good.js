@@ -26,8 +26,10 @@ $.ajax({
          
         lat = lat.toString();
         lng = lng.toString();
-        //use lat and long from google api in the hiking url
+        //use lat and long from google api in the hiking url for campgrounds and trails
                 queryURL2 = "https://www.hikingproject.com/data/get-trails?lat=" + lat + "&lon=" + lng + "&maxDistance=50&key=200673425-58529fa038b4b328e30d69f2afdf1905";
+               
+                queryURL3 = "https://www.hikingproject.com/data/get-campgrounds?lat=" + lat + "&lon=" + lng + "&maxDistance=50&key=200673425-58529fa038b4b328e30d69f2afdf1905";
         //call hiking api to get hiking trails 
         $.ajax({
             url: queryURL2,
@@ -36,6 +38,14 @@ $.ajax({
                 console.log(response);
                 
                  })
+       // call campground api
+       $.ajax({
+        url: queryURL3,
+        method: "GET"
+      }).then(function(response) {
+            console.log(response);
+            
+             })
 
 })});
 

@@ -24,13 +24,13 @@ $("#submit").on("click", function (event) {
             let date = forecast[i].dt;
             // convert the date to a more readable time.
             date = moment.unix(date).toDate();
-            convertedDate = moment(date).format("h:mm A")
+            let convertedDate = moment(date).format("h:mm A")
             // get the temperature
-            temperature = forecast[i].main.temp;
+            let temperature = forecast[i].main.temp;
             // get the weather description
-            description = forecast[i].weather[0].description;
+            let description = forecast[i].weather[0].description;
             //get main for percipitaion 
-            main = forecast[i].weather[0].main;
+            let main = forecast[i].weather[0].main;
             // console log the results
             console.log(convertedDate);
             console.log(`Temperature (F): ${Math.floor(temperature)}`)
@@ -45,32 +45,38 @@ $("#submit").on("click", function (event) {
             );
             // clear the zip
             $("#zip").val("").focus();
+        
+        }
+        temp = forecast[0].main.temp;
+        main = forecast[0].weather[0].main;
+        console.log(temp);
+        console.log(main);
 
-//depending on conditions run good or bad weather function
+        //depending on conditions run good or bad weather function
 
     //need to break the loop if 
     //what if we made an avg temp variable and a description array to check?
 
-/*            if (avgTemperature < "50" && main == "Rain" || description == "Snow" || main == "Thunderstorm" || main == "Drizzle") {
+          if (temp < "50" || main == "Rain" || main == "Snow" || main == "Thunderstorm" || main == "Drizzle") {
                 badWeather();
 
             } else {
                 goodWeather();
-            }*/
-        
-        }
+            }
     })
-});
+})
 
-/*function goodWeather(){
+function goodWeather(){
     console.log("good!")
+    // generate activity buttons
 }
 
 function badWeather(){
     console.log("bad...")
+    // generate activity buttons
 }
 
 
-convert to F
---display weather
-take in degree, weather.description to determine good or bad weather */
+//convert to F
+//--display weather
+//take in degree, weather.description to determine good or bad weather 
