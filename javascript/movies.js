@@ -13,7 +13,20 @@ $.ajax({
     method: "GET"
 }).then(function (response) {
     console.log(response.results);
-    // create a div called card that will hold all of the movie information, give it a class of movie-card
-    let card = $("<div>").addClass("movie-card");
-    
+    // set movieArray equal to response.reults
+    let movieArray = response.results;
+    // being the loop
+    movieArray.forEach(array => {
+        // create a div called card that will hold all of the movie information, give it a class of movie-card
+        let card = $("<div>").addClass("movie-card");
+        // get the information from arrays
+        let title = array.title;
+        console.log(title);
+        let rating = array.vote_average;
+        console.log(rating);
+        let release = array.release_date;
+        let overview = array.overview;
+        let poster = array.poster_path;
+        console.log(poster);
+    })
 })
