@@ -1,6 +1,6 @@
 
 console.log("linked")
-var zip;
+var zip ;
 var key = "2c2ebda745768cdab3335ed8a1f21aef"
 $("#submit").on("click", function (event) {
     event.preventDefault();
@@ -8,7 +8,7 @@ $("#submit").on("click", function (event) {
     zip = $("#zip").val().trim();
     console.log(zip);
 
-    var queryURL = `http://api.openweathermap.org/data/2.5/forecast?zip=${zip},us&units=imperial&APPID=${key}`;
+    var queryURL = `http://api.openweathermap.org/data/2.5/forecast?zip=${zip},us&units=imperial&APPID=${key}&cnt=3`;
 
 
     $.ajax({
@@ -24,11 +24,13 @@ $("#submit").on("click", function (event) {
             let date = forecast[i].dt;
             // convert the date to a more readable time.
             date = moment.unix(date).toDate();
-            convertedDate = moment(date).format("h:mm A")
+            let convertedDate = moment(date).format("h:mm A")
             // get the temperature
-            temperature = forecast[i].main.temp;
+            let temperature = forecast[i].main.temp;
             // get the weather description
-            description = forecast[i].weather[0].description;
+            let description = forecast[i].weather[0].description;
+            //get main for percipitaion 
+            let main = forecast[i].weather[0].main;
             // console log the results
             console.log(convertedDate);
             console.log(`Temperature (F): ${Math.floor(temperature)}`)
@@ -43,12 +45,38 @@ $("#submit").on("click", function (event) {
             );
             // clear the zip
             $("#zip").val("").focus();
+        
         }
-    })
-});
+        temp = forecast[0].main.temp;
+        main = forecast[0].weather[0].main;
+        console.log(temp);
+        console.log(main);
 
-/*
-convert to F
---display weather
-take in degree, weather.description to determine good or bad weather
- */
+        //depending on conditions run good or bad weather function
+
+    //need to break the loop if 
+    //what if we made an avg temp variable and a description array to check?
+
+          if (temp < "50" || main == "Rain" || main == "Snow" || main == "Thunderstorm" || main == "Drizzle") {
+                badWeather();
+
+            } else {
+                goodWeather();
+            }
+    })
+})
+
+function goodWeather(){
+    console.log("good!")
+    // generate activity buttons
+}
+
+function badWeather(){
+    console.log("bad...")
+    // generate activity buttons
+}
+
+
+//convert to F
+//--display weather
+//take in degree, weather.description to determine good or bad weather 
