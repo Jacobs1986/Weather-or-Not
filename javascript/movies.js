@@ -12,5 +12,8 @@ $.ajax({
     url: queryURL,
     method: "GET"
 }).then(function (response) {
-    console.log(response);
+    console.log(response.results);
+    // create a div called card that will hold all of the movie information, give it a class of movie-card
+    let card = $("<div>").addClass("movie-card");
+    
 })
