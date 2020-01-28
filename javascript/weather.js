@@ -36,7 +36,7 @@ $("#submit").on("click", function (event) {
             console.log(`Temperature (F): ${Math.floor(temperature)}`)
             console.log(description);
             // display results into the table
-            $("#results").append(
+            $("#weatherTable").append(
                 `<tr>
                     <td>${convertedDate}</td>
                     <td>${Math.floor(temperature)}
