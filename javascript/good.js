@@ -1,4 +1,5 @@
-console.log("The file is linked.")
+//function goodWeather() {
+    console.log("The file is linked.")
 var zip;
 var lng;
 var lat;
@@ -36,18 +37,61 @@ $.ajax({
             method: "GET"
           }).then(function(response) {
                 console.log(response);
-                
+                let trailsArray = response.trails;
+                trailsArray.forEach(list => {
+                  let trailCard = $("<div>").addClass("card");
+                  let trailName = list.name;
+                  console.log(trailName);
+                  let trailSummary = list.summary;
+                  console.log(trailSummary);
+                  let trailDifficulty = list.difficulty;
+                  console.log(trailDifficulty);
+                  let trailLocal = list.location;
+                  console.log(trailLocal);
+                  let trailURL = list.url;
+                  console.log(trailURL);
+                  // create paragraphs for each variable
+                  let trailP = $("<p>").text(trailName);
+                  let summaryP = $("<p>").text("Summary: " + trailSummary);
+                  let difficultyP = $("<p>").text("Difficulty: " + trailDifficulty);
+                  let locationP = $("<p>").text("Location: " + trailLocal);
+                  let urlP = $("<a>").attr("href", trailURL).text("Check out the full site here!");
+                  // append each to trailCard
+                  trailCard.append(trailP, summaryP, difficultyP, locationP, urlP);
+                  $("#trails").append(trailCard);
+                })
+            
                  })
+
        // call campground api
        $.ajax({
         url: queryURL3,
         method: "GET"
       }).then(function(response) {
             console.log(response);
-            
+            let campgroundsArray = response.campgrounds;
+            campgroundsArray.forEach(list => {
+
+                let cgCard = $("<div>").addClass("card");
+                let cgName = list.name;
+                let cgLocal = list.location;
+                let cgURL = list.url;
+                // create paragraphs for each variable
+                let cgNameP = $("<p>").text(cgName);
+                let cgLocalP = $("<p>").text("Location: " + cgLocal);
+                let cgURLP = $("<a>").attr("href", cgURL).text("Check out the full site here!");
+                // append each to the cgGard
+                cgCard.append(cgNameP, cgLocalP, cgURLP);
+                // append to trails div
+                $("#campgrounds").append(cgCard);
+
+
+            })
+
              })
 
-})});
+})})
+//};
 
 
 

@@ -66,10 +66,7 @@ $("#submit").on("click", function (event) {
     })
 })
 
-function goodWeather(){
-    console.log("good!")
-    // generate activity buttons
-}
+
 
 function badWeather(){
     console.log("bad...")
