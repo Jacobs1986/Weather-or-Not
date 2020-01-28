@@ -7,7 +7,7 @@ $("#submit").on("click", function(event) {
     zip = $("#zip").val().trim();
     console.log(zip);
 
-    var queryURL = `http://api.openweathermap.org/data/2.5/forecast?zip=${zip},us&units=imperial&APPID=${key}&cnt=3`;
+    var queryURL = `https://api.openweathermap.org/data/2.5/forecast?zip=${zip},us&units=imperial&APPID=${key}&cnt=3`;
 
 
     $.ajax({
