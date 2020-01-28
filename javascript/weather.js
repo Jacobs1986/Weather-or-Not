@@ -1,19 +1,20 @@
+
 console.log("linked")
-var zip;
+var zip ;
 var key = "2c2ebda745768cdab3335ed8a1f21aef"
-$("#submit").on("click", function(event) {
+$("#submit").on("click", function (event) {
     event.preventDefault();
     console.log("clicked");
     zip = $("#zip").val().trim();
     console.log(zip);
 
-    var queryURL = `http://api.openweathermap.org/data/2.5/forecast?zip=${zip},us&units=imperial&APPID=${key}&cnt=3`;
+    var queryURL = `https://api.openweathermap.org/data/2.5/forecast?zip=${zip},us&units=imperial&APPID=${key}&cnt=3`;
 
 
     $.ajax({
         url: queryURL,
         method: "GET"
-    }).then(function(response) {
+    }).then(function (response) {
         console.log(response.list)
         let forecast = response.list;
         console.log(forecast);
@@ -24,7 +25,7 @@ $("#submit").on("click", function(event) {
             // convert the date to a more readable time.
             date = moment.unix(date).toDate();
             let convertedDate = moment(date).format("h:mm A")
-                // get the temperature
+            // get the temperature
             let temperature = forecast[i].main.temp;
             // get the weather description
             let description = forecast[i].weather[0].description;
@@ -35,23 +36,16 @@ $("#submit").on("click", function(event) {
             console.log(`Temperature (F): ${Math.floor(temperature)}`)
             console.log(description);
             // display results into the table
-            $("div.resultsTable").append(
-                `<table>
-                <tr>
-                    <th>Time</th>
-                    <th>Temperature (F)</th>
-                    <th>Description</th>
-                </tr>
-                <tr>
+            $("#results").append(
+                `<tr>
                     <td>${convertedDate}</td>
-                    <td>${Math.floor(temperature)}</td>
+                    <td>${Math.floor(temperature)}
                     <td>${description}</td>
-                </tr>
-                </table>`
+                </tr>`
             );
             // clear the zip
             $("#zip").val("").focus();
-
+        
         }
         temp = forecast[0].main.temp;
         main = forecast[0].weather[0].main;
@@ -60,29 +54,29 @@ $("#submit").on("click", function(event) {
 
         //depending on conditions run good or bad weather function
 
-        //need to break the loop if 
-        //what if we made an avg temp variable and a description array to check?
+    //need to break the loop if 
+    //what if we made an avg temp variable and a description array to check?
 
-        if (temp < "50" || main == "Rain" || main == "Snow" || main == "Thunderstorm" || main == "Drizzle") {
-            badWeather();
+          if (temp < "50" || main == "Rain" || main == "Snow" || main == "Thunderstorm" || main == "Drizzle") {
+                badWeather();
 
-        } else {
-            goodWeather();
-        }
+            } else {
+                goodWeather();
+            }
     })
 })
 
-function goodWeather() {
+function goodWeather(){
     console.log("good!")
-        // generate activity buttons
+    // generate activity buttons
 }
 
-function badWeather() {
+function badWeather(){
     console.log("bad...")
-        // generate activity buttons
+    // generate activity buttons
 }
 
 
 //convert to F
 //--display weather
-//take in degree, weather.description to determine good or bad weather
+//take in degree, weather.description to determine good or bad weather 
