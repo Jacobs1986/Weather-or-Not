@@ -9,13 +9,11 @@ for (let i = 0; i < goodWeatherButtons.length; i++) {
     let button = $("<button>").text(goodWeatherButtons[i]).attr("class", "btn btn-outline-warning").attr("id", "activityButton");
     $("#accordion").append(button);
 
-    $(".selector").accordion({
-        $("<div>").attr("id", goodWeatherButtons[i])
-        active: 2
-    });
+    
 
 
 };
+$("#accordian").accordion();
 
 for (let i = 0; i < badWeatherButtons.length; i++) {
     let button = $("<button>").text(badWeatherButtons[i]).attr("class", "btn btn-outline-warning").attr("id", "activityButton");
@@ -24,11 +22,11 @@ for (let i = 0; i < badWeatherButtons.length; i++) {
 };
 
 
-$(".selector").accordion({
-    animate: 200
-});
+//$(".selector").accordion({
+  //  animate: 200
+//});
 
 
 
 
-https: //api.jqueryui.com/accordion/</button>
+//https: //api.jqueryui.com/accordion/</button>
