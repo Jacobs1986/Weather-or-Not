@@ -1,15 +1,27 @@
-let goodWeatherButtons = ['Go for a Hike', 'Grill Out', 'Make a Summer Drink', 'Stargaze']
+let goodWeatherButtons = ['Trails', 'Camp Grounds']
 
-let badWeatherButtons = ['Make Cocoa', "Read a Book", "Bake a Treat", "Play a Video Game"]
+let badWeatherButtons = ['Movies', "Books"]
 
 let weatherButtonIndex = 0
 
 //this isn't working through all of them...
-for (let i = 0; i < goodWeatherButtons[weatherButtonIndex].length; i++) {
-    $("#accordian").html("<div>").text(goodWeatherButtons[weatherButtonIndex]).attr("class", "btn btn-outline-warning").attr("id", "activityButton");
-    weatherButtonIndex++;
+for (let i = 0; i < goodWeatherButtons.length; i++) {
+    let button = $("<button>").text(goodWeatherButtons[i]).attr("class", "btn btn-outline-warning").attr("id", "activityButton");
+    $("#accordion").append(button);
+
+    $(".selector").accordion({
+        $("<div>").attr("id", goodWeatherButtons[i])
+        active: 2
+    });
+
+
 };
 
+for (let i = 0; i < badWeatherButtons.length; i++) {
+    let button = $("<button>").text(badWeatherButtons[i]).attr("class", "btn btn-outline-warning").attr("id", "activityButton");
+    $("#accordion").append(button);
+
+};
 
 
 $(".selector").accordion({
@@ -18,30 +30,5 @@ $(".selector").accordion({
 
 
 
-`
 
-<h3></h3>//h3 = first result
-<div> 
-  <p>
-  
-  </p>
-</div>//result content
-<h3></h3>//h3 = second result//
-<div>
-  <p>
-  </p>
-</div>  //result content
-
-<h3></h3>//h3 = third result//
-<div>
-  <p>
-  </p>
-</div>  //result content
-
-<h3></h3>//h3 = fourth result
-<div>
-  <p>
-  </p>
-</div>  //p = result content;
-
-//more comments!
+https: //api.jqueryui.com/accordion/</button>
