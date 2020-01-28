@@ -1,31 +1,57 @@
+body {}
+
 #header {
-    width: 100%;
-    display: flex;
-    justify-content: center;
+    width: 80%;
+    _display: flex;
+    _justify-content: space-around;
+    z-index: 2;
 }
 
 .center {
-    width: 80%;
+    _width: 100%;
+}
+
+h1 {
     font-size: 50px;
     line-height: 62px;
     text-align: center;
     font-family: 'Londrina Shadow', cursive;
     color: rgb(0, 0, 173);
-    background-color: rgb(255, 210, 96);
+    z-index: 2;
+}
+
+.headerDecor {
+    z-index: 2;
     border-width: 1px;
     border-style: solid;
     border-color: rgb(0, 0, 173);
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    margin-bottom: 15px;
+    background-color: rgb(255, 210, 96);
 }
 
-#content {
+main {
     display: flex;
     justify-content: space-around;
     width: 80%;
-    font-family: 'Londrina Solid', cursive;
-    color: rgb(0, 0, 173);
-    padding: 5px;
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    padding: 8px;
+}
+
+h3 {
+    font-family: 'Londrina Solid', cursive;
+    font-size: x-large;
+    color: rgb(0, 0, 173);
+    padding: 7px;
+    margin: 5px;
+}
+
+p {
+    font-family: 'Londrina Solid', cursive;
+    font-size: large;
+    color: rgb(0, 0, 173);
+    padding: 7px;
+    margin: 5px;
 }
 
 #weather {
@@ -33,9 +59,6 @@
     border-width: 1px;
     border-style: dotted;
     border-color: rgb(255, 210, 96);
-    font-family: 'Londrina Solid', cursive;
-    justify-content: space-evenly;
-    color: rgb(0, 0, 173);
     text-align: center;
 }
 
@@ -56,15 +79,22 @@
     font-family: 'Londrina Solid', cursive;
     color: rgb(0, 0, 173);
     text-align: center;
-    padding: 5px;
+    _padding: 5px;
 }
 
 .btn-outline-warning {
     font-family: 'Londrina Solid', cursive;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.05), 0 6px 20px 0 rgba(0, 0, 0, 0.05);
 }
 
 #activityButton.btn-outline-warning:hover {
     color: rgb(0, 0, 173);
+}
+
+input#submit:hover {
+    color: rgb(0, 0, 173);
+    background-color: rgb(255, 210, 96);
+    ;
 }
 
 #footer {
@@ -77,10 +107,44 @@
     width: 50%;
 }
 
-#submit {
+input {
+    border-color: rgb(255, 210, 96);
+    font-family: 'Londrina Solid', cursive;
+    color: rgb(255, 210, 96);
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.05), 0 6px 20px 0 rgba(0, 0, 0, 0.05);
+    padding: 5px;
+    border-radius: 4px;
+}
+
+.container {
+    position: relative;
+    background-color: white;
+}
+
+table {
+    display: flex;
+    justify-content: space-evenly;
+    margin: 10px;
     color: rgb(0, 0, 173);
 }
 
-#container {
-    position: relative;
+h6 {
+    color: rgb(80, 75, 12);
+    ;
+}
+
+#resultsTable {
+    display: inline;
+    border: 1px solid black;
+    _border-collapse: collapse;
+}
+
+table,
+th,
+td {
+    font-family: 'Londrina Solid', cursive;
+    padding: 6px;
+    border: 1px dotted rgb(255, 210, 96);
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.05), 0 6px 20px 0 rgba(0, 0, 0, 0.05);
+    _border-collapse: collapse;
 }
