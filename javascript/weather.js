@@ -60,7 +60,10 @@ $(document).ready(function () {
             //what if we made an avg temp variable and a description array to check?
 
             if (temp < "50" || main == "Rain" || main == "Snow" || main == "Thunderstorm" || main == "Drizzle") {
-                badWeather();
+                $("#generatehere").html('<div class="accordion" id="list"><h3>Fiction Books</h3><div id="fiction"></div><h3>Nonfiction Books</h3><div id="nonfiction"></div></div>');
+                $(function () {
+                    $(".accordion").accordion()
+                });
 
             } else {
                 goodWeather(zip);
