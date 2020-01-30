@@ -1,5 +1,9 @@
 body {}
 
+div#coolstuff {
+    overflow: hidden;
+}
+
 #header {
     width: 80%;
     _display: flex;
@@ -134,13 +138,19 @@ h6 {
 }
 
 #resultsTable {
-    display: inline;
-    border: 1px solid black;
+    _display: inline;
+    _border: 1px solid black;
     _border-collapse: collapse;
+    margin: 20px;
 }
 
-table,
-th,
+table {
+    _display: flex;
+    _justify-content: center;
+    _margin: 10px;
+    _color: rgb(0, 0, 173);
+}
+
 td {
     font-family: 'Londrina Solid', cursive;
     padding: 6px;
@@ -149,4 +159,8 @@ td {
     _border-collapse: collapse;
 }
 
-//comment for github practice//
+th {
+    padding: 10px;
+    border: 2px solid rgb(255, 210, 96);
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.1), 0 6px 20px 0 rgba(0, 0, 0, 0.1);
+}
