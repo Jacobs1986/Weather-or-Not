@@ -3,28 +3,36 @@
 // fiction list
 let fictionURL = "https://api.nytimes.com/svc/books/v3/lists/current/combined-print-and-e-book-fiction.json?api-key=3YQuGFy92xIcnvvGkCgI8xxyrhi7grZk";
 
-$.ajax({
-    url: fictionURL,
-    method: "GET"
-}).then(function(fictionBookList) {
-    let list = fictionBookList.results.books;
-    for (let i = 0; i < list.length; i++) {
-        bookDisplay(list[i], "listFiction");
-    }
-})
+bookList = () => {
+    $("#generatehere").html('<div class="accordion" id="list"><h3>Fiction Books</h3><div id="fiction"></div><h3>Nonfiction Books</h3><div id="nonfiction"></div></div>');
+    $(function () {
+        $(".accordion").accordion()
+    });
+    $.ajax({
+        url: fictionURL,
+        method: "GET"
+    }).then(function (fictionBookList) {
+        let list = fictionBookList.results.books;
+        for (let i = 0; i < list.length; i++) {
+            bookDisplay(list[i], "fiction");
+        }
+        $("#list").accordion("refresh");
+    })
 
-// nonfiction list
-let nonFictionURL = "https://api.nytimes.com/svc/books/v3/lists/current/combined-print-and-e-book-nonfiction.json?api-key=3YQuGFy92xIcnvvGkCgI8xxyrhi7grZk";
+    // nonfiction list
+    let nonFictionURL = "https://api.nytimes.com/svc/books/v3/lists/current/combined-print-and-e-book-nonfiction.json?api-key=3YQuGFy92xIcnvvGkCgI8xxyrhi7grZk";
 
-$.ajax({
-    url: nonFictionURL,
-    method: "GET"
-}).then(function(nonFictionBookList) {
-    let list = nonFictionBookList.results.books;
-    for (let i = 0; i < list.length; i++) {
-        bookDisplay(list[i], "listnonFiction");
-    }
-})
+    $.ajax({
+        url: nonFictionURL,
+        method: "GET"
+    }).then(function (nonFictionBookList) {
+        let list = nonFictionBookList.results.books;
+        for (let i = 0; i < list.length; i++) {
+            bookDisplay(list[i], "nonfiction");
+        }
+        $("#list").accordion("refresh");
+    })
+}
 
 let bookDisplay = (list, displayID) => {
     console.log(list);
