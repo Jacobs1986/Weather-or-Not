@@ -1,5 +1,9 @@
 body {}
 
+div#coolstuff {
+    overflow: hidden;
+}
+
 #header {
     width: 80%;
     _display: flex;
