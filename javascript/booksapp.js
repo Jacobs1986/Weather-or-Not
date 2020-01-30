@@ -4,7 +4,7 @@
 let fictionURL = "https://api.nytimes.com/svc/books/v3/lists/current/combined-print-and-e-book-fiction.json?api-key=3YQuGFy92xIcnvvGkCgI8xxyrhi7grZk";
 
 bookList = () => {
-    $("#generatehere").html('<div class="accordion" id="list"><h3>Fiction Books</h3><div id="fiction"></div><h3>Nonfiction Books</h3><div id="nonfiction"></div></div>');
+    $("#generatehere").html('<div class="accordion" id="list"><h3>Fiction Books</h3><div id="fiction"></div><h3>Nonfiction Books</h3><div id="nonfiction"></div><h3>Movies</h3><div id="movies-list"></div></div>');
     $(function () {
         $(".accordion").accordion()
     });

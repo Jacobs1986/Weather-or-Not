@@ -61,6 +61,7 @@ $(document).ready(function () {
 
             if (temp < "50" || main == "Rain" || main == "Snow" || main == "Thunderstorm" || main == "Drizzle") {
                 bookList();
+                movieList();
             } else {
                 goodWeather(zip);
             }
