@@ -1,0 +1,16 @@
+.border1 {
+    border-width: 2px;
+    border-style: solid;
+    border-color: red;
+}
+
+.bookCard {
+    float: left;
+    margin-bottom: 2%;
+    width: 100%;
+}
+
+.cover {
+    width: 100px;
+    float: left;
+}

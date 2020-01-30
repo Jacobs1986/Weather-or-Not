@@ -38,7 +38,7 @@ let bookDisplay = (list, displayID) => {
     console.log(list);
     console.log(displayID);
     // create the book card where all the information is going to go, this will be a div with a class of .bookCard
-    let book = $("<div>").addClass("bookCard border1");
+    let book = $("<div>").addClass("bookCard");
     // get the title, author, description and book_image and save them to different variables
     // let title = list.title;
     // let author = list.author;
