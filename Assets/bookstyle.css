@@ -4,13 +4,15 @@
     border-color: red;
 }
 
-.bookCard {
+.bookCard,
+.movie-card {
     float: left;
     margin-bottom: 2%;
     width: 100%;
 }
 
-.cover {
+.cover,
+.poster {
     width: 100px;
     float: left;
 }

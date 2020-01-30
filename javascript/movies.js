@@ -35,7 +35,7 @@ movieList = () => {
             let releaseP = $("<p>").text(`Release Date: ${release}`);
             let overviewP = $("<p>").text(overview);
             // get the poster
-            let posterImage = $("<img>").attr("src", `https://image.tmdb.org/t/p/w300${poster}`)
+            let posterImage = $("<img>").attr("src", `https://image.tmdb.org/t/p/w300${poster}`).addClass("poster");
             // append paragraphs to the card
             // card.append(titleP);
             card.append(posterImage);
