@@ -38,30 +38,33 @@ let bookDisplay = (list, displayID) => {
     console.log(list);
     console.log(displayID);
     // create the book card where all the information is going to go, this will be a div with a class of .bookCard
-    let book = $("<div>").addClass("bookCard");
+    let book = $("<div>").addClass("bookCard border1");
     // get the title, author, description and book_image and save them to different variables
-    let title = list.title;
-    let author = list.author;
+    // let title = list.title;
+    // let author = list.author;
     let description = list.description;
+    let link = list.amazon_product_url;
     let bookImage = list.book_image;
     // create paragraph for the title, author and description
-    title = $("<p>").text(title);
-    author = $("<p>").text(author);
+    // title = $("<p>").text(title);
+    // author = $("<p>").text(author);
     description = $("<p>").text(description);
     // add class for each: title "bookTitle" author "bookAuthor" description "bookDescription"
-    title.addClass("bookTitle");
-    author.addClass("bookAuthor");
+    // title.addClass("bookTitle");
+    // author.addClass("bookAuthor");
     description.addClass("bookDescription");
     // append each to the book card
-    book.append(title);
-    book.append(author);
-    book.append(description);
+    // book.append(title);
+    // book.append(author);
     // create cover variable with the src being bookImage
     let cover = $("<img>").attr("src", bookImage);
+    let coverLink = $("<a>").attr("href", link).append(cover);
+    coverLink.attr("target", "_blank");
     // add a class of cover to cover
     cover.addClass("cover");
     // append to the book card
-    book.append(cover);
+    book.append(coverLink);
+    book.append(description);
     // append book card to the apporiate div
     $(`#${displayID}`).append(book);
 }
