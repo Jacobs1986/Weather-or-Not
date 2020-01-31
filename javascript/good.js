@@ -12,8 +12,15 @@ function goodWeather(zip) {
     $(function () {
         $(".accordion").accordion()
     });
+    $("#weatherTable").prepend(
+        `<tr>
+        <td>Time</td>
+        <td>Temp (F)</td>
+        <td>Skys</td>
+    </tr>`)
+var res = $("<div>").html('<h3>Looks like a nice day!</h3>');
 
-
+$("#weatherResults").prepend(res);
 
     var queryURL = "https://maps.googleapis.com/maps/api/geocode/json?address=" + zip + "&key=" + FUkey;
     console.log(queryURL)
