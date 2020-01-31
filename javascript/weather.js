@@ -10,6 +10,7 @@ $(document).ready(function () {
         zip = $("#zip").val().trim();
         console.log(zip);
         $("#weatherTable").empty();
+        $("#weatherStuff").empty();
 
         var queryURL = `https://api.openweathermap.org/data/2.5/forecast?zip=${zip},us&units=imperial&APPID=${key}&cnt=3`;
 

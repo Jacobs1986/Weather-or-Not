@@ -20,7 +20,7 @@ function goodWeather(zip) {
     </tr>`)
 var res = $("<div>").html('<h3>Looks like a nice day!</h3>');
 
-$("#weatherResults").prepend(res);
+$("#weatherStuff").prepend(res);
 
     var queryURL = "https://maps.googleapis.com/maps/api/geocode/json?address=" + zip + "&key=" + FUkey;
     console.log(queryURL)

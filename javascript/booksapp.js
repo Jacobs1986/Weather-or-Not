@@ -4,6 +4,15 @@
 let fictionURL = "https://api.nytimes.com/svc/books/v3/lists/current/combined-print-and-e-book-fiction.json?api-key=3YQuGFy92xIcnvvGkCgI8xxyrhi7grZk";
 
 bookList = () => {
+    $("#weatherTable").prepend(
+        `<tr>
+        <td>Time</td>
+        <td>Temp (F)</td>
+        <td>Skys</td>
+    </tr>`)
+var res = $("<div>").html('<h3>Good thing there is plenty to do inside!</h3>');
+
+$("#weatherStuff").prepend(res);
     $("#generatehere").html('<div class="accordion" id="list"><h3>Fiction Books</h3><div id="fiction"></div><h3>Nonfiction Books</h3><div id="nonfiction"></div><h3>Movies</h3><div id="movies-list"></div></div>');
     $(function () {
         $(".accordion").accordion()
