@@ -5,10 +5,11 @@ $(document).ready(function () {
     var key = "2c2ebda745768cdab3335ed8a1f21aef"
     $("#submit").on("click", function (event) {
         event.preventDefault();
+        
         console.log("clicked");
         zip = $("#zip").val().trim();
         console.log(zip);
-
+        $("#weatherTable").empty();
 
         var queryURL = `https://api.openweathermap.org/data/2.5/forecast?zip=${zip},us&units=imperial&APPID=${key}&cnt=3`;
 

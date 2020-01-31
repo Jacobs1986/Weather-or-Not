@@ -41,7 +41,7 @@ function goodWeather(zip) {
             console.log(response);
             let trailsArray = response.trails;
             trailsArray.forEach(list => {
-                let trailCard = $("<p>").addClass("card");
+                let trailCard = $("<p>").addClass("trailCard");
                 let trailName = list.name;
                 console.log(trailName);
                 let trailSummary = list.summary;
@@ -75,7 +75,7 @@ function goodWeather(zip) {
             let campgroundsArray = response.campgrounds;
             campgroundsArray.forEach(list => {
 
-                let cgCard = $("<p>").addClass("card");
+                let cgCard = $("<p>").addClass("trailCard");
                 let cgName = list.name;
                 let cgLocal = list.location;
                 let cgURL = list.url;
