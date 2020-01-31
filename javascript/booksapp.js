@@ -16,8 +16,8 @@ bookList = () => {
         for (let i = 0; i < list.length; i++) {
             bookDisplay(list[i], "fiction");
         }
-        $("#list").accordion("refresh");
-        $(".ui-accordion-content").css({'height': '337px'});
+        // $("#list").accordion("refresh");
+        // $(".ui-accordion-content").css({'height': '337px'});
     })
 
     // nonfiction list
@@ -31,7 +31,8 @@ bookList = () => {
         for (let i = 0; i < list.length; i++) {
             bookDisplay(list[i], "nonfiction");
         }
-        $("#list").accordion("refresh");
+        // $("#list").accordion("refresh");
+        // $(".ui-accordion-content").css({'height': '337px'});
     })
 }
 

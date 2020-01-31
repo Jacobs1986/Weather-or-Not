@@ -46,5 +46,6 @@ movieList = () => {
             $("#movies-list").append(card);
         })
         $("#list").accordion("refresh");
+        $(".ui-accordion-content").css({'height': '500px'});
     })
 }
