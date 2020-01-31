@@ -17,6 +17,7 @@ bookList = () => {
             bookDisplay(list[i], "fiction");
         }
         $("#list").accordion("refresh");
+        $(".ui-accordion-content").css({'height': '337px'});
     })
 
     // nonfiction list
