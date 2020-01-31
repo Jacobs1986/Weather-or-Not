@@ -1,0 +1,24 @@
+.border1 {
+    border-width: 2px;
+    border-style: solid;
+    border-color: red;
+}
+
+.bookCard,
+.movie-card {
+    float: left;
+    margin-bottom: 2%;
+    width: 100%;
+}
+
+.cover,
+.poster {
+    width: 100px;
+    float: left;
+}
+
+/*
+.ui-accordion-content {
+    height: 337px;
+}
+*/

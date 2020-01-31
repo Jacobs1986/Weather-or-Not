@@ -60,8 +60,8 @@ $(document).ready(function () {
             //what if we made an avg temp variable and a description array to check?
 
             if (temp < "50" || main == "Rain" || main == "Snow" || main == "Thunderstorm" || main == "Drizzle") {
-                badWeather();
-
+                bookList();
+                movieList();
             } else {
                 goodWeather(zip);
             }
