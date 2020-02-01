@@ -69,7 +69,7 @@ $("#weatherStuff").prepend(res);
                 trailCard.append(trailP, summaryP, difficultyP, locationP, urlP);
                 $("#trails").append(trailCard);
             })
-            $("#list").accordion("refresh");
+            
 
         })
 
@@ -98,6 +98,7 @@ $("#weatherStuff").prepend(res);
 
             })
             $("#list").accordion("refresh");
+        $(".ui-accordion-content").css({'height': '500px'});
         })
 
     })
