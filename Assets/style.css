@@ -51,7 +51,7 @@ h3 {
 }
 
 p {
-    font-family: 'Londrina Solid', cursive;
+    font-family: 'Handlee', cursive;
     font-size: large;
     color: rgb(0, 0, 173);
     padding: 7px;
@@ -73,6 +73,11 @@ p {
     justify-content: space-evenly;
     font-family: 'Londrina Solid', cursive;
     color: rgb(0, 0, 173);
+}
+
+//need to finish//
+#weatherStuff:only-child {
+    text-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.1), 0 6px 20px 0 rgba(0, 0, 0, 0.1);
 }
 
 #stuff {
@@ -163,4 +168,15 @@ th {
     padding: 10px;
     border: 2px solid rgb(255, 210, 96);
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.1), 0 6px 20px 0 rgba(0, 0, 0, 0.1);
+}
+
+#generatehere {
+    display: flex;
+    justify-content: space-evenly;
+    margin: 10px 20px 20px 10px;
+}
+
+//need to work on more//
+.accordian {
+    _border: 1px dotted rgb(255, 210, 96);
 }
