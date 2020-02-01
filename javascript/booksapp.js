@@ -10,7 +10,7 @@ bookList = () => {
         <td>Temp (F)</td>
         <td>Skys</td>
     </tr>`)
-var res = $("<div>").html('<h3>Good thing there is plenty to do inside!</h3>');
+var res = $("<div>").html('<h3 id="message">Good thing there is plenty to do inside!<br><br> Check It Out -></h3>');
 
 $("#weatherStuff").prepend(res);
     $("#generatehere").html('<div class="accordion" id="list"><h3>Fiction Books</h3><div id="fiction"></div><h3>Nonfiction Books</h3><div id="nonfiction"></div><h3>Movies</h3><div id="movies-list"></div></div>');

@@ -25,6 +25,9 @@
 #trails {
     max-height: 500px;
 }
+#message {
+    color: rgb(228, 208, 30);
+}
 
 /*
 .ui-accordion-content {
