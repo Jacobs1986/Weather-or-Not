@@ -19,15 +19,14 @@
 }
 
 .trailCard {
-    background-color: aliceblue;
+    background-color:  rgb(255, 210, 96);
 }
 #campgrounds,
 #trails {
     max-height: 500px;
 }
 #message {
-    color: rgb(228, 208, 30);
-}
+    color:  rgb(255, 210, 96);
 
 /*
 .ui-accordion-content {
