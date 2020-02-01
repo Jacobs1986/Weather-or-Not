@@ -49,20 +49,28 @@ $(document).ready(function () {
                     <td>${Math.floor(temperature)}</td>
                     <td>${description}</td> 
                 </tr>`
-
+                
                 );
                 //$("#weatherStuff").append(iconImage);
                 // clear the zip
 
 
                 $("#zip").val("").focus();
-
             };
 
             temp = forecast[0].main.temp;
             main = forecast[0].weather[0].main;
+            date = forecast[0].dt;
+            date = moment.unix(date).toDate();
+            convertedDate = moment(date).format("hh:mm");
+            var time = parseInt(convertedDate);
+            console.log("date " + time);
             console.log(temp);
             console.log(main);
+            var a = moment().format("HH");
+            var b = parseInt(a);
+            console.log(typeof a);
+            console.log(`Current time is: ${a}`);
 
             //depending on conditions run good or bad weather function
 
@@ -77,8 +85,10 @@ $(document).ready(function () {
                 $("#weatherStuff").html("<i class='far fa-snowflake' style='font-size:40px'></i>");
             } else if (main == "Mist" || main == "Smoke" || main == "Fog" || main == "Haze") {
                 $("#weatherStuff").html("<i class='fas fa-smog' style='font-size:40px'></i>");
-            } else if (main == "Clear") {
+            } else if (main == "Clear" && b < 17) {
                 $("#weatherStuff").html("<i class='fas fa-sun' style='font-size:40px'></i>");
+            } else if (main == "Clear" && b >= 17) {
+                $("#weatherStuff").html("<i class='fas fa-moon' style='font-size:40px'></i>");
             } else {
                 $("#weatherStuff").html("<i class='fas fa-cloud' style='font-size:40px'></i>");
             };
