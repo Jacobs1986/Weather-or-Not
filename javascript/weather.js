@@ -61,6 +61,10 @@ $(document).ready(function () {
 
             temp = forecast[0].main.temp;
             main = forecast[0].weather[0].main;
+            date = forecast[0].dt;
+            date = moment.unix(date).toDate();
+            convertedDate = moment(date).format("hh:mm ");
+            console.log("date " + convertedDate);
             console.log(temp);
             console.log(main);
 
