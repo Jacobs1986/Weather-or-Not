@@ -60,7 +60,7 @@ $("#weatherStuff").prepend(res);
                 let trailURL = list.url;
                 console.log(trailURL);
                 // create paragraphs for each variable
-                let trailP = $("<p>").text(trailName);
+                let trailP = $("<p>").text(trailName).attr("id", "title");
                 let summaryP = $("<p>").text("Summary: " + trailSummary);
                 let difficultyP = $("<p>").text("Difficulty: " + trailDifficulty);
                 let locationP = $("<p>").text("Location: " + trailLocal);
@@ -87,7 +87,7 @@ $("#weatherStuff").prepend(res);
                 let cgLocal = list.location;
                 let cgURL = list.url;
                 // create paragraphs for each variable
-                let cgNameP = $("<p>").text(cgName);
+                let cgNameP = $("<p>").text(cgName).attr("id", "title");
                 let cgLocalP = $("<p>").text("Location: " + cgLocal);
                 let cgURLP = $("<a>").attr("href", cgURL).attr("target", "_blank").text("Check out the full site here!");
                 // append each to the cgGard
