@@ -177,6 +177,12 @@ th {
 }
 
 //need to work on more//
-.accordian {
-    _border: 1px dotted rgb(255, 210, 96);
+h3.ui-accordian-header:active {
+    border: 1px dotted rgb(255, 210, 96);
+    background-color: #ffc107;
+}
+
+#title {
+    background-color: rgb(0, 0, 173);
+    color: rgb(255, 210, 96);
 }
