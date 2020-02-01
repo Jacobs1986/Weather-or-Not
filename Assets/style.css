@@ -75,9 +75,8 @@ p {
     color: rgb(0, 0, 173);
 }
 
-//need to finish//
-#weatherStuff:only-child {
-    text-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.1), 0 6px 20px 0 rgba(0, 0, 0, 0.1);
+i.fas {
+    text-shadow: 0px 2px 6px rgb(255, 210, 96);
 }
 
 #stuff {
@@ -173,16 +172,23 @@ th {
 #generatehere {
     display: flex;
     justify-content: space-evenly;
-    margin: 10px 20px 20px 10px;
-}
-
-//need to work on more//
-h3.ui-accordian-header:active {
-    border: 1px dotted rgb(255, 210, 96);
-    background-color: #ffc107;
+    margin: 10px 15px 10px 20px;
 }
 
 #title {
     background-color: rgb(0, 0, 173);
     color: rgb(255, 210, 96);
+}
+
+h3#message {
+    -webkit-text-stroke-width: .5px;
+    -webkit-text-stroke-color: rgb(0, 0, 173);
+}
+
+h3.ui-accordion-header {
+    _border: 1px dotted rgb(255, 210, 96);
+    background-color: rgba(0, 0, 173, 0.877);
+    color: rgb(255, 210, 96);
+    -webkit-text-stroke-width: .5px;
+    -webkit-text-stroke-color: rgb(0, 0, 173);
 }
