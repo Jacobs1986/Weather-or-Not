@@ -98,7 +98,7 @@ $("#weatherStuff").prepend(res);
 
             })
             $("#list").accordion("refresh");
-        $(".ui-accordion-content").css({'height': '500px'});
+            $(".ui-accordion-content").css({'height': '500px'});
         })
 
     })

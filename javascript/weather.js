@@ -18,7 +18,8 @@ $(document).ready(function () {
         $.ajax({
             url: queryURL,
             method: "GET"
-        }).then(function (response) {
+        })
+        .then(function (response) {
             console.log(response.list);
             let forecast = response.list;
             console.log(forecast);
@@ -99,6 +100,8 @@ $(document).ready(function () {
             } else {
                 goodWeather(zip);
             }
+        }).fail(function (error) {
+            console.log(error);
         })
     })
 })

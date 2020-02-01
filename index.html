@@ -18,7 +18,7 @@
         <link rel="stylesheet" href="Assets/bookstyle.css">
 
         <!--JQUERY-->
-        <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+        <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
 
         <!--Moment js-->
         <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.24.0/moment.min.js"></script>
@@ -54,7 +54,7 @@
                 <aside id="weather" class="">
                     <h3>WEATHER IN YOUR AREA</h3><br>
                     <label><p>Enter your zipcode:</p></label><br>
-                    <input id="zip" type="text" maxlength="5"></input>
+                    <input input id="zip" type="text" pattern="[0-9]{5}" title="Five digit zip code" maxlength="5" inputmode="numeric"></input>
                     <input id="submit" type="submit">
                     <div id="weatherResults">
                         <div id="weatherStuff"></div>
