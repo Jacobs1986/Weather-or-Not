@@ -16,9 +16,9 @@ function goodWeather(zip) {
         `<tr>
         <td>Time</td>
         <td>Temp (F)</td>
-        <td>Skys</td>
+        <td>Skies</td>
     </tr>`)
-var res = $("<div>").html('<h3 id="message">Looks like a nice day to go outside!<br><br>Check Out Where -></h3>');
+var res = $("<div>").html('<h3 id="message">Looks like good weather to go outside!<br><br>Check Out Where -></h3>');
 
 $("#weatherStuff").prepend(res);
 
@@ -64,7 +64,7 @@ $("#weatherStuff").prepend(res);
                 let summaryP = $("<p>").text("Summary: " + trailSummary);
                 let difficultyP = $("<p>").text("Difficulty: " + trailDifficulty);
                 let locationP = $("<p>").text("Location: " + trailLocal);
-                let urlP = $("<a>").attr("href", trailURL).text("Check out the full site here!");
+                let urlP = $("<a>").attr("href", trailURL).attr("target", "_blank").text("Check out the full site here!");
                 // append each to trailCard
                 trailCard.append(trailP, summaryP, difficultyP, locationP, urlP);
                 $("#trails").append(trailCard);
@@ -89,7 +89,7 @@ $("#weatherStuff").prepend(res);
                 // create paragraphs for each variable
                 let cgNameP = $("<p>").text(cgName);
                 let cgLocalP = $("<p>").text("Location: " + cgLocal);
-                let cgURLP = $("<a>").attr("href", cgURL).text("Check out the full site here!");
+                let cgURLP = $("<a>").attr("href", cgURL).attr("target", "_blank").text("Check out the full site here!");
                 // append each to the cgGard
                 cgCard.append(cgNameP, cgLocalP, cgURLP);
                 // append to trails div
