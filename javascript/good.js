@@ -16,7 +16,7 @@ function goodWeather(zip) {
         `<tr>
         <td>Time</td>
         <td>Temp (F)</td>
-        <td>Skys</td>
+        <td>Skies</td>
     </tr>`)
 var res = $("<div>").html('<h3 id="message">Looks like good weather to go outside!<br><br>Check Out Where -></h3>');
 

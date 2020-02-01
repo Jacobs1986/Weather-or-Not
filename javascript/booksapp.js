@@ -8,7 +8,7 @@ bookList = () => {
         `<tr>
         <td>Time</td>
         <td>Temp (F)</td>
-        <td>Skys</td>
+        <td>Skies</td>
     </tr>`)
 var res = $("<div>").html('<h3 id="message">Good thing there is plenty to do inside!<br><br> Check It Out -></h3>');
 
