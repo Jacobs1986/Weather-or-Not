@@ -21,15 +21,17 @@
 .trailCard {
     background-color:  rgb(255, 210, 96);
 }
+
 #campgrounds,
 #trails {
     max-height: 500px;
 }
+
 #message {
     color:  rgb(255, 210, 96);
-
-/*
-.ui-accordion-content {
-    height: 337px;
 }
-*/
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
